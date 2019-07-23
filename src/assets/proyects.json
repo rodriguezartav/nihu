@@ -1,0 +1,97 @@
+[
+  {
+    "id": "remodelacion-exterior-hermosa",
+    "title": "Remodelación Exterior Casa Playa Hermosa",
+    "tags": ["casa", "remodelacion"],
+    "description": "",
+    "images": ["1.jpg", "2.jpg"]
+  },
+  {
+    "id": "yellow-door-house",
+    "title": "Yellow Door House",
+    "tags": ["casa", "llave en mano"],
+    "description": "",
+    "images": [
+      "1.jpeg",
+      "2.jpeg",
+      "3.jpeg",
+      "4.jpeg",
+      "5.jpeg",
+      "6.jpeg",
+      "7.jpeg",
+      "8.jpeg",
+      "9.jpeg",
+      "10.jpeg",
+      "11.jpeg",
+      "12.jpeg",
+      "13.jpeg",
+      "14.jpeg",
+      "15.jpeg",
+      "16.jpeg",
+      "17.jpeg",
+      "18.jpeg",
+      "19.jpeg",
+      "20.jpeg",
+      "21.jpeg",
+      "22.jpeg",
+      "23.jpeg",
+      "24.jpeg",
+      "25.jpeg",
+      "26.jpeg",
+      "27.jpeg",
+      "28.jpeg",
+      "29.jpeg",
+      "p1.jpg"
+    ]
+  },
+  {
+    "id": "gh",
+    "title": "Casa GH",
+    "description": "",
+    "tags": ["casa", "llave en mano"],
+    "images": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg",
+      "7.jpg",
+      "8.jpg",
+      "9.jpg",
+      "10.jpg",
+      "11.jpg",
+      "p1.jpg",
+      "p2.jpg",
+      "p3.jpg"
+    ]
+  },
+  {
+    "id": "nihause",
+    "title": "Oficinas Nihause",
+    "tags": ["oficina", "remodelación"],
+    "description": "",
+    "images": ["1.jpg"]
+  },
+  {
+    "id": "sala-descanso",
+    "title": "Sala de Descansdo",
+    "description": "",
+    "tags": ["oficina", "añadido"],
+    "images": ["1.jpg", "2.jpg", "3.jpg", "4.jpeg", "5.jpeg", "6.jpeg"]
+  },
+  {
+    "id": "mb",
+    "tags": ["institucional", "ante-proyecto"],
+    "title": "Casa MB",
+    "description": "",
+    "images": ["1.jpg", "2.jpeg", "3.jpeg", "4.jpeg"]
+  },
+  {
+    "id": "eeel",
+    "tags": ["institucional", "ante-proyecto"],
+    "title": "Escuela Enseñanza Especial",
+    "description": "",
+    "images": ["1.jpeg", "2.jpeg", "3.jpeg"]
+  }
+]
