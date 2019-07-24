@@ -22,20 +22,23 @@ function App() {
             <div className="col-xs-12 col-md-10 col-text-center no-padding">
               <div className="pull-left mobile-mb-30 tablet-mb-50">
                 <div className="info-text">
-                  <h2>Informacioón de Contacto:</h2>
-                  <p className="mb-30">
-                    There are many variations of passages of Lo Ipsum <br /> available, but the majority have
-                    suffered alteration in <br /> some form, by injected hu.
-                  </p>
+                  <h2>Información de Contacto:</h2>
+                  <p className="mb-30" />
                   <ul>
                     <li className="mb-15">
-                      <span>Address:</span> 17 Street Name here Office, <br />
-                      80 Newlok US 8.
+                      <span>San José:</span> 400 mts sur, Antiguo Higuerón, San Pedro, <br />
+                      <span>Teléfono:</span>
+                      <a href="tel:+50622535957"> +50622535957</a>
                     </li>
-                    <li>
-                      <span>Phone:</span>
-                      <a href="tel:+1122588788966"> +11 225 887 889 66</a>
+                    <li />
+                    <li className="mb-15">
+                      <span>Guanacaste:</span> Local comercial #4, Hermosa del Mar, <br />
+                      Frente a Restaurant Ginger,Playa Hermosa
+                      <br />
+                      <span>Teléfono:</span>
+                      <a href="tel:+50622535957"> +50626720050</a>
                     </li>
+
                     <li>
                       <span>Email:</span>
                       <a href="mailto:MiniPo@gmail.com"> info@nihuarquitectos.com</a>
