@@ -10,21 +10,10 @@ export default function FormDialog(props) {
       <div className="col-xs-12 col-md-3 item item work3d print ">
         <div className="single-portfolio overlay">
           <img
-            style={{ height: 190 }}
-            src={`/img/proyectos/${props.item.id}/${props.item.images[0]}`}
-            alt="MiniPo"
+            style={{ height: 170 }}
+            src={`/img/proyectos/${props.item.id}/item.jpg`}
+            alt="Nihu Foto del Proyecto"
           />
-          <div className="zoom-icon">
-            <a
-              className="venobox"
-              data-gall="gall-img"
-              href={`/img/proyectos/${props.item.id}${props.item.images[0]}`}>
-              <i className="zmdi zmdi-fullscreen" />
-            </a>
-            <a href="portfolio-details.html">
-              <i className="zmdi zmdi-link" />
-            </a>
-          </div>
         </div>
         <div className="project-title pl-30 ptb-30">
           <a href="portfolio-details.html">

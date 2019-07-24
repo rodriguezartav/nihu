@@ -247,6 +247,11 @@
  .section-padding {
      padding: 120px 0;
  }
+
+ .section-padding-small {
+    padding: 60px 0;
+}
+
  .section-pt {
      padding: 120px 0;
  }

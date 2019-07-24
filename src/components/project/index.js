@@ -52,7 +52,7 @@ export default function Proyect(props) {
           </div>
         </div>
 
-        <div className="portfolio-details light-bg section-padding">
+        <div className="portfolio-details light-bg section-padding-small">
           <div className="container">
             <div className="row pb-80">
               <div className="col-xs-12 col-sm-8 mobile-mb-30">
