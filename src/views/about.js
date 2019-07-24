@@ -56,7 +56,7 @@ export default function App() {
             <div className="col-xs-12 col-sm-4 mobile-mb-30">
               <div className="single-service">
                 <i className="zmdi zmdi-favoritcoe-outline" />
-                <h5 className="text-uppercase">Construccioón</h5>
+                <h5 className="text-uppercase">Construcción</h5>
                 <hr className="line" />
                 <p>
                   Contrary to popular belief, LoremIpsum isnot simply random text. It has roots in a piece of

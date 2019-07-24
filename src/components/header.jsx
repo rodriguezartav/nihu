@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.jpg";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 export default function FormDialog(props) {

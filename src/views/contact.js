@@ -55,7 +55,7 @@ function App() {
                     method="post">
                     <div className="row">
                       <div className="col-xs-12 col-sm-6">
-                        <input type="text" id="contact_name" name="name" placeholder="Su nomnbre" required />
+                        <input type="text" id="contact_name" name="name" placeholder="Su nombre" required />
                       </div>
                       <div className="col-xs-12 col-sm-6">
                         <input type="email" id="contact_email" name="email" placeholder="Email" required />
