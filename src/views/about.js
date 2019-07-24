@@ -9,7 +9,7 @@ export default function App() {
             <div className="col-xs-12">
               <div className="page-title ptb-110">
                 <h1 className="mb-15">Nihu Arquitectos</h1>
-                <h4 className="mb-5">Estudio de Arquitectura y Diseño Artesanal</h4>
+                <h4 className="mb-5">Estudio de Arquitectura y Diseño </h4>
               </div>
             </div>
           </div>
