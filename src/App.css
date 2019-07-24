@@ -252,3 +252,9 @@
     transform: translate3d(0, 0, 0);
   }
 }
+
+.portfolio-info strong {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}

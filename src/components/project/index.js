@@ -58,7 +58,13 @@ export default function Proyect(props) {
               <div className="col-xs-12 col-sm-8 mobile-mb-30">
                 <div className="portfolio-info pr-35">
                   <h2>{project.title}</h2>
-                  <p>{project.description}</p>
+                  <p>
+                    {(project.description || "").split("..").map(line => {
+                      return (
+                        <div style={{ marginTop: 10 }} dangerouslySetInnerHTML={{ __html: line + "." }} />
+                      );
+                    })}
+                  </p>
                 </div>
               </div>
               <div className="col-xs-12 col-sm-4">
@@ -66,7 +72,8 @@ export default function Proyect(props) {
                   <ul style={{ marginTop: 40 }} className="work-info">
                     {details.map(detail => (
                       <li>
-                        <span>{detail.key} :</span> <p>{detail.value}</p>
+                        <span>{detail.key} :</span>{" "}
+                        <p dangerouslySetInnerHTML={{ __html: detail.value.replace(",", "<br/>") }} />
                       </li>
                     ))}
                   </ul>
@@ -88,6 +95,27 @@ export default function Proyect(props) {
                   </div>
                 );
               })}
+            </div>
+            <div className="portfolio-details light-bg pb-80">
+              <div className="portfolio-info pr-35">
+                {(project.details || "").split("..").map(line => {
+                  return (
+                    <div
+                      style={{
+                        paddingRight: "10%",
+                        color: "#818181",
+                        fontSize: "16px",
+                        lineHeight: "28px",
+                        paddingLeft: "10%",
+                        marginTop: 10,
+                        marginLeft: "auto",
+                        marginRight: "auto"
+                      }}
+                      dangerouslySetInnerHTML={{ __html: line + "." }}
+                    />
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>

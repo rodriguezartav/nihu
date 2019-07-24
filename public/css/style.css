@@ -2935,7 +2935,7 @@
      color: #4c4c4c;
  }
  .portfolio-info > p {
-     color: #818181;
+     color: #333;
      font-size: 16px;
      line-height: 28px;
  }
@@ -2944,7 +2944,7 @@
      float: left;
      font-size: 15px;
      line-height: 28px;
-     width: 100px;
+     width: 120px;
  }
  .work-info li p,
  .work-info > li {
