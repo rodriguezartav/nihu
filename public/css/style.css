@@ -1622,7 +1622,7 @@
  .logo-and-menu .mainmenu {
      display: inline-block;
  }
- .logo-and-menu .navigation .dropdown:nth-child(3) {
+ .logo-and-menu .navigation li:nth-child(2) {
      margin-right: 370px;
  }
  /* Small and Tablet Screen Support */
@@ -1634,7 +1634,7 @@
          position: static;
          line-height: 0;
      }
-     .logo-and-menu .navigation .dropdown:nth-child(3) {
+     .logo-and-menu .navigation li:nth-child(2) {
          margin-right: 19px;
      }
      .logo-and-menu .logo,

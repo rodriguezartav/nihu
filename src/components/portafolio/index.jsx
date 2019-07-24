@@ -32,11 +32,6 @@ export default function FormDialog(props) {
                   <Item item={item} />
                 ))}
               </div>
-              <div className="view-all text-center">
-                <a className="btn mt-60" id="load-more-btn">
-                  Load More <i className="zmdi zmdi-refresh-sync" />
-                </a>
-              </div>
             </div>
           </div>
         </div>
