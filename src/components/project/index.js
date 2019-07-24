@@ -3,6 +3,7 @@ import Projects from "../../assets/proyects.json";
 import Portafolio from "../../components/portafolio";
 import Modal from "./modal";
 import useModal from "./useModal";
+var mobile = require("is-mobile");
 
 const block = {
   height: "70vh",
@@ -22,8 +23,13 @@ export default function Proyect(props) {
     return project.id === props.id;
   })[0];
 
+  var details = Object.keys(project.detalles).map(key => {
+    return { key: key, value: project.detalles[key] };
+  });
+
   function showImage(url, index) {
     return () => {
+      if (mobile()) return;
       setUrl(url);
       setIndex(index);
       toggle();
@@ -38,8 +44,8 @@ export default function Proyect(props) {
             <div className="row text-center">
               <div className="col-xs-12">
                 <div className="page-title ptb-110">
-                  <h1 className="mb-15">{project.title}</h1>
-                  <h4 className="mb-5">We are branding & digital studio from London.</h4>
+                  <h1 className="mb-15">Nihu Arquitectos</h1>
+                  <h4 className="mb-5">Detalles del Proyecto</h4>
                 </div>
               </div>
             </div>
@@ -51,38 +57,18 @@ export default function Proyect(props) {
             <div className="row pb-80">
               <div className="col-xs-12 col-sm-8 mobile-mb-30">
                 <div className="portfolio-info pr-35">
-                  <h2>Portfolio Item Title</h2>
-                  <p>
-                    There are many variations of passages of Lorem Ipsum available, but the majority have
-                    fered altation in some form, by injmour, or randomised words which don't look even
-                    slightlievable. Iyoare going use a passage of Lorem Ipsum, you need to be surthere isn't
-                    anything embarrassing hidden.There are many variations of passages of Lorem Ipsum
-                    available, but the majority have suffered alteration in some form, by injected humour, or
-                    randomised words{" "}
-                  </p>
+                  <h2>{project.title}</h2>
+                  <p>{project.description}</p>
                 </div>
               </div>
               <div className="col-xs-12 col-sm-4">
                 <div className="portfolio-info">
-                  <ul className="work-info">
-                    <li>
-                      <span>Client :</span> <p>Regal Theme</p>
-                    </li>
-                    <li>
-                      <span>Created By :</span> <p>Héctor Nieto</p>
-                    </li>
-                    <li>
-                      <span>Completed :</span> <p>20 Jun 2017</p>
-                    </li>
-                    <li>
-                      <span>Skill :</span> <p>Photoshop, Indesign</p>
-                    </li>
-                    <li>
-                      <span>Services :</span>{" "}
-                      <p>
-                        Sells, Marketing, PSD <br /> Envato, All, Charlila
-                      </p>
-                    </li>
+                  <ul style={{ marginTop: 40 }} className="work-info">
+                    {details.map(detail => (
+                      <li>
+                        <span>{detail.key} :</span> <p>{detail.value}</p>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>

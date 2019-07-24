@@ -3,14 +3,20 @@
     "id": "remodelacion-exterior-hermosa",
     "title": "Remodelación Exterior Casa Playa Hermosa",
     "tags": ["casa", "remodelacion"],
-    "description": "",
-    "images": ["1.jpg", "2.jpg"]
+    "description": "There are many variations of passages of Lorem Ipsum available, but the majority have fered altation in some form, by injmour, or randomised words which don't look even slightlievable. Iyoare going use a passage of Lorem Ipsum, you need to be surthere isn't anything embarrassing hidden.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words",
+    "images": ["1.jpg", "2.jpg"],
+    "detalles": {
+      "Prespuesto": "$100,000",
+      "Construcción": "1000 M2",
+      "Ubiación": "Playa Hermosa",
+      "Servicios": "Diseño, Construcción,Supervision"
+    }
   },
   {
     "id": "yellow-door-house",
     "title": "Yellow Door House",
     "tags": ["casa", "llave en mano"],
-    "description": "",
+    "description": "There are many variations of passages of Lorem Ipsum available, but the majority have fered altation in some form, by injmour, or randomised words which don't look even slightlievable. Iyoare going use a passage of Lorem Ipsum, you need to be surthere isn't anything embarrassing hidden.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words",
     "images": [
       "1.jpeg",
       "2.jpeg",
@@ -42,12 +48,18 @@
       "28.jpeg",
       "29.jpeg",
       "p1.jpg"
-    ]
+    ],
+    "detalles": {
+      "Prespuesto": "$100,000",
+      "Construcción": "1000 M2",
+      "Ubiación": "Playa Hermosa",
+      "Servicios": "Diseño, Construcción,Supervision"
+    }
   },
   {
     "id": "gh",
     "title": "Casa GH",
-    "description": "",
+    "description": "There are many variations of passages of Lorem Ipsum available, but the majority have fered altation in some form, by injmour, or randomised words which don't look even slightlievable. Iyoare going use a passage of Lorem Ipsum, you need to be surthere isn't anything embarrassing hidden.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words",
     "tags": ["casa", "llave en mano"],
     "images": [
       "1.jpg",
@@ -64,34 +76,64 @@
       "p1.jpg",
       "p2.jpg",
       "p3.jpg"
-    ]
+    ],
+    "detalles": {
+      "Prespuesto": "$100,000",
+      "Construcción": "1000 M2",
+      "Ubiación": "Playa Hermosa",
+      "Servicios": "Diseño, Construcción,Supervision"
+    }
   },
   {
     "id": "nihause",
     "title": "Oficinas Nihause",
     "tags": ["oficina", "remodelación"],
-    "description": "",
-    "images": ["1.jpg"]
+    "description": "There are many variations of passages of Lorem Ipsum available, but the majority have fered altation in some form, by injmour, or randomised words which don't look even slightlievable. Iyoare going use a passage of Lorem Ipsum, you need to be surthere isn't anything embarrassing hidden.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words",
+    "images": ["1.jpg"],
+    "detalles": {
+      "Prespuesto": "$100,000",
+      "Construcción": "1000 M2",
+      "Ubiación": "Playa Hermosa",
+      "Servicios": "Diseño, Construcción,Supervision"
+    }
   },
   {
     "id": "sala-descanso",
     "title": "Sala de Descansdo",
-    "description": "",
+    "description": "There are many variations of passages of Lorem Ipsum available, but the majority have fered altation in some form, by injmour, or randomised words which don't look even slightlievable. Iyoare going use a passage of Lorem Ipsum, you need to be surthere isn't anything embarrassing hidden.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words",
     "tags": ["oficina", "añadido"],
-    "images": ["1.jpg", "2.jpg", "3.jpg", "4.jpeg", "5.jpeg", "6.jpeg"]
+    "images": ["1.jpg", "2.jpg", "3.jpg", "4.jpeg", "5.jpeg", "6.jpeg"],
+    "detalles": {
+      "Prespuesto": "$100,000",
+      "Construcción": "1000 M2",
+      "Ubiación": "Playa Hermosa",
+      "Servicios": "Diseño, Construcción,Supervision"
+    }
   },
   {
     "id": "mb",
     "tags": ["institucional", "ante-proyecto"],
     "title": "Casa MB",
-    "description": "",
-    "images": ["1.jpg", "2.jpeg", "3.jpeg", "4.jpeg"]
+    "description": "There are many variations of passages of Lorem Ipsum available, but the majority have fered altation in some form, by injmour, or randomised words which don't look even slightlievable. Iyoare going use a passage of Lorem Ipsum, you need to be surthere isn't anything embarrassing hidden.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words",
+    "images": ["1.jpg", "2.jpeg", "3.jpeg", "4.jpeg"],
+    "detalles": {
+      "Prespuesto": "$100,000",
+      "Construcción": "1000 M2",
+      "Ubiación": "Playa Hermosa",
+      "Servicios": "Diseño, Construcción,Supervision"
+    }
   },
   {
     "id": "eeel",
     "tags": ["institucional", "ante-proyecto"],
     "title": "Escuela Enseñanza Especial",
-    "description": "",
-    "images": ["1.jpeg", "2.jpeg", "3.jpeg"]
+    "description": "There are many variations of passages of Lorem Ipsum available, but the majority have fered altation in some form, by injmour, or randomised words which don't look even slightlievable. Iyoare going use a passage of Lorem Ipsum, you need to be surthere isn't anything embarrassing hidden.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words",
+    "images": ["1.jpeg", "2.jpeg", "3.jpeg"],
+    "detalles": {
+      "Prespuesto": "$100,000",
+      "Construcción": "1000 M2",
+      "Ubiación": "Playa Hermosa",
+      "Servicios": "Diseño, Construcción,Supervision"
+    }
   }
 ]
