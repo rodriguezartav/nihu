@@ -12,7 +12,7 @@ export default function FormDialog(props) {
             <div className="slider-text ptb-100 plr-60">
               <h1 className="font-50">Estudio de arquitectura</h1>
               <p>
-                Usamos el diseño de detalles constructivos que se convierten en protagonistas de nuestra
+                Usamos el diseño de detalles constructivos para que se convierten en protagonistas de nuestra
                 arquitectura y que reinvindican el valor del trabajo artesanal por encima de soluciones
                 genéricas del mercado.
                 <br />
