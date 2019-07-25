@@ -1,8 +1,7 @@
 import React from "react";
-import Projects from "../../assets/proyects.json";
+
 import Portafolio from "../../components/portafolio";
 import Modal from "./modal";
-import useModal from "./useModal";
 var mobile = require("is-mobile");
 
 const block = {
@@ -15,13 +14,20 @@ export default function Proyect(props) {
   const [index, setIndex] = React.useState("");
   const [isShowing, setIsShowing] = React.useState(false);
 
+  const [images, setImages] = React.useState([]);
+  const [mainImage, setMainImage] = React.useState("");
+
   function toggle() {
     setIsShowing(!isShowing);
   }
-
-  var project = Projects.filter(project => {
-    return project.id === props.id;
-  })[0];
+  var project = props.project;
+  React.useEffect(() => {
+    setMainImage(project.images[0]);
+    setImages([]);
+    setTimeout(() => {
+      setImages(project.images);
+    }, 1000);
+  }, [props.project]);
 
   var details = Object.keys(project.detalles).map(key => {
     return { key: key, value: project.detalles[key] };
@@ -43,9 +49,11 @@ export default function Proyect(props) {
           <div className="container">
             <div className="row text-center">
               <div className="col-xs-12">
-                <div className="page-title ptb-110">
-                  <h1 className="mb-15">Nihu Arquitectos</h1>
-                  <h4 className="mb-5">Detalles del Proyecto</h4>
+                <div className="page-title ptb-50">
+                  <div className="portfolio-info pr-35">
+                    <h2 style={{ marginTop: 20, marginBottom: 30 }}>{project.title}</h2>
+                  </div>
+                  <img src={`/img/proyectos/${props.project.id}/${mainImage}`} alt="MiniPo" />
                 </div>
               </div>
             </div>
@@ -57,7 +65,6 @@ export default function Proyect(props) {
             <div className="row pb-80">
               <div className="col-xs-12 col-sm-8 mobile-mb-30">
                 <div className="portfolio-info pr-35">
-                  <h2>{project.title}</h2>
                   <p>
                     {(project.description || "").split("..").map(line => {
                       return (
@@ -81,15 +88,15 @@ export default function Proyect(props) {
               </div>
             </div>
             <div className="row text-center">
-              {project.images.map((image, index) => {
+              {images.map((image, index) => {
                 return (
                   <div style={{ marginBottom: 30 }} className="col-xs-12 col-sm-6">
                     <div className="portfolio-image mobile-mb-30">
                       <div
                         className="venobox"
                         data-gall="gall-img"
-                        onClick={showImage(`/img/proyectos/${props.id}/${image}`, index)}>
-                        <img src={`/img/proyectos/${props.id}/${image}`} alt="MiniPo" />
+                        onClick={showImage(`/img/proyectos/${project.id}/${image}`, index)}>
+                        <img src={`/img/proyectos/${project.id}/${image}`} alt="MiniPo" />
                       </div>
                     </div>
                   </div>
