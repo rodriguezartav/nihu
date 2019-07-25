@@ -23,7 +23,7 @@ function App() {
           <Route path="/contact-us.html/" component={Contact} />
           <Route path="/team.html/" component={Team} />
           <Route path="/proyectos/:id" component={Project} />
-
+          <Route path="/proyectos/:id/:image" component={Project} />
           <Footer />
         </div>
       </ScrollToTop>

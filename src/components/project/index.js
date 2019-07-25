@@ -26,7 +26,7 @@ export default function Proyect(props) {
     setImages([]);
     setTimeout(() => {
       setImages(project.images);
-    }, 1000);
+    }, 2000);
   }, [props.project]);
 
   var details = Object.keys(project.detalles).map(key => {
@@ -36,9 +36,11 @@ export default function Proyect(props) {
   function showImage(url, index) {
     return () => {
       if (mobile()) return;
-      setUrl(url);
-      setIndex(index);
-      toggle();
+      //setUrl(url);
+      //setIndex(index);
+      //toggle();
+      setMainImage(project.images[index]);
+      window.scroll(0, 200);
     };
   }
 
@@ -46,17 +48,55 @@ export default function Proyect(props) {
     <div style={isShowing ? block : {}}>
       <div>
         <div className="pages-header bg-color-2">
-          <div className="container">
-            <div className="row text-center">
-              <div className="col-xs-12">
+          <div className="">
+            <div className=" text-center">
+              <div className="">
                 <div className="page-title ptb-50">
                   <div className="portfolio-info pr-35">
-                    <h2 style={{ marginTop: 20, marginBottom: 30 }}>{project.title}</h2>
+                    <h2 style={{ paddingTop: 20, marginTop: 10, marginBottom: 30 }}>{project.title}</h2>
                   </div>
-                  <img src={`/img/proyectos/${props.project.id}/${mainImage}`} alt="MiniPo" />
+                  <img
+                    style={{ width: "100vw", marginBottom: 30 }}
+                    src={`/img/proyectos/${props.project.id}/${mainImage}`}
+                    alt="MiniPo"
+                  />
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        <div className="" style={{ marginTop: 20, marginBottom: 20 }}>
+          <div
+            className=""
+            style={{
+              maxWidth: "90vw",
+              margin: "auto",
+              display: "flex",
+              flexDirection: "row",
+              flexWrap: "wrap",
+              justifyContent: "center",
+              alignItems: "center"
+            }}>
+            {images.map((image, index) => {
+              return (
+                <div
+                  style={{
+                    width: "30vw",
+                    alignSelf: "center",
+                    alignItems: "center"
+                  }}>
+                  <div style={{ margin: 2 }} className="portfolio-image mobile-mb-30">
+                    <div
+                      className="venobox"
+                      data-gall="gall-img"
+                      onClick={showImage(`/img/proyectos/${project.id}/${image}`, index)}>
+                      <img src={`/img/proyectos/${project.id}/${image}`} alt="MiniPo" />
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
 
@@ -76,7 +116,7 @@ export default function Proyect(props) {
               </div>
               <div className="col-xs-12 col-sm-4">
                 <div className="portfolio-info">
-                  <ul style={{ marginTop: 40 }} className="work-info">
+                  <ul style={{ marginTop: 10 }} className="work-info">
                     {details.map(detail => (
                       <li>
                         <span>{detail.key} :</span>{" "}
@@ -87,22 +127,7 @@ export default function Proyect(props) {
                 </div>
               </div>
             </div>
-            <div className="row text-center">
-              {images.map((image, index) => {
-                return (
-                  <div style={{ marginBottom: 30 }} className="col-xs-12 col-sm-6">
-                    <div className="portfolio-image mobile-mb-30">
-                      <div
-                        className="venobox"
-                        data-gall="gall-img"
-                        onClick={showImage(`/img/proyectos/${project.id}/${image}`, index)}>
-                        <img src={`/img/proyectos/${project.id}/${image}`} alt="MiniPo" />
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
+
             <div className="portfolio-details light-bg pb-80">
               <div className="portfolio-info pr-35">
                 {(project.details || "").split("..").map(line => {

@@ -41,7 +41,7 @@ export default function App() {
                 <div className="thumb shine">
                   <img src="img/team/4.jpg" alt="Member Image" />
                 </div>
-                <h3 className="mb-5">Helena </h3>
+                <h3 className="mb-5">Elena Alfaro </h3>
                 <h4 className="no-margin">Arquitecta</h4>
               </div>
             </div>
@@ -50,8 +50,8 @@ export default function App() {
                 <div className="thumb shine">
                   <img src="img/team/3.jpg" alt="Member Image" />
                 </div>
-                <h3 className="mb-5">Samia Nieto</h3>
-                <h4 className="no-margin">Diseñadora</h4>
+                <h3 className="mb-5">Monica Murrilo</h3>
+                <h4 className="no-margin">Ingeniera</h4>
               </div>
             </div>
           </div>
