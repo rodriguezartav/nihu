@@ -30,7 +30,12 @@ export default function Proyect(props) {
     setMainImage(project.images[0]);
     setImages([]);
     setTimeout(() => {
-      setImages(project.images);
+      setImages(
+        project.images.filter(image => {
+          if (mobile() && image == project.images[0]) return false;
+          return true;
+        })
+      );
     }, 3000);
   }, [props.project]);
 
@@ -39,11 +44,21 @@ export default function Proyect(props) {
   });
 
   const useStyles = makeStyles({
+    gridWrapper: {
+      maxWidth: props => (props.mobile ? "100vw" : "90vw"),
+      margin: "auto",
+      display: "flex",
+      flexDirection: "row",
+      flexWrap: "wrap",
+      justifyContent: "center",
+      alignItems: "center"
+    },
+
     gridImage: {
       width: props => (props.mobile ? "100vw" : "20vw"),
       height: props => (props.mobile ? null : "20vh"),
       marginBottom: 10,
-      marginRight: 10,
+      marginRight: props => (props.mobile ? 1 : 10),
       alignSelf: "center",
       alignItems: "center",
       overflow: "hidden",
@@ -92,17 +107,7 @@ export default function Proyect(props) {
         </div>
 
         <div className="" style={{ marginTop: 20, marginBottom: 20 }}>
-          <div
-            className=""
-            style={{
-              maxWidth: "90vw",
-              margin: "auto",
-              display: "flex",
-              flexDirection: "row",
-              flexWrap: "wrap",
-              justifyContent: "center",
-              alignItems: "center"
-            }}>
+          <div className={classes.gridWrapper}>
             {images.map((image, index) => {
               return (
                 <div
