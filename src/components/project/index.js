@@ -2,6 +2,10 @@ import React from "react";
 
 import Portafolio from "../../components/portafolio";
 import Modal from "./modal";
+import Img from "./img";
+
+import { makeStyles } from "@material-ui/styles";
+
 var mobile = require("is-mobile");
 
 const block = {
@@ -15,22 +19,43 @@ export default function Proyect(props) {
   const [isShowing, setIsShowing] = React.useState(false);
 
   const [images, setImages] = React.useState([]);
-  const [mainImage, setMainImage] = React.useState("");
+  const [mainImage, setMainImage] = React.useState();
 
   function toggle() {
     setIsShowing(!isShowing);
   }
   var project = props.project;
+
   React.useEffect(() => {
     setMainImage(project.images[0]);
     setImages([]);
     setTimeout(() => {
       setImages(project.images);
-    }, 2000);
+    }, 3000);
   }, [props.project]);
 
   var details = Object.keys(project.detalles).map(key => {
     return { key: key, value: project.detalles[key] };
+  });
+
+  const useStyles = makeStyles({
+    gridImage: {
+      width: props => (props.mobile ? "100vw" : "20vw"),
+      height: props => (props.mobile ? null : "20vh"),
+      marginBottom: 10,
+      marginRight: 10,
+      alignSelf: "center",
+      alignItems: "center",
+      overflow: "hidden",
+      "&:hover": {
+        boxShadow: "0 0 0.5em #e0e0e0"
+      }
+    },
+    mainImage: {
+      minHeight: props => (props.mobile ? null : "100vh"),
+      width: "100vw",
+      marginBottom: 30
+    }
   });
 
   function showImage(url, index) {
@@ -40,9 +65,11 @@ export default function Proyect(props) {
       //setIndex(index);
       //toggle();
       setMainImage(project.images[index]);
+
       window.scroll(0, 200);
     };
   }
+  const classes = useStyles({ mobile: mobile() });
 
   return (
     <div style={isShowing ? block : {}}>
@@ -55,11 +82,9 @@ export default function Proyect(props) {
                   <div className="portfolio-info pr-35">
                     <h2 style={{ paddingTop: 20, marginTop: 10, marginBottom: 30 }}>{project.title}</h2>
                   </div>
-                  <img
-                    style={{ width: "100vw", marginBottom: 30 }}
-                    src={`/img/proyectos/${props.project.id}/${mainImage}`}
-                    alt="MiniPo"
-                  />
+                  <div className={classes.mainImage}>
+                    <Img src={`img/proyectos/${props.project.id}/${mainImage}`} alt="MiniPo" />
+                  </div>
                 </div>
               </div>
             </div>
@@ -81,19 +106,13 @@ export default function Proyect(props) {
             {images.map((image, index) => {
               return (
                 <div
-                  style={{
-                    width: "30vw",
-                    alignSelf: "center",
-                    alignItems: "center"
-                  }}>
-                  <div style={{ margin: 2 }} className="portfolio-image mobile-mb-30">
-                    <div
-                      className="venobox"
-                      data-gall="gall-img"
-                      onClick={showImage(`/img/proyectos/${project.id}/${image}`, index)}>
-                      <img src={`/img/proyectos/${project.id}/${image}`} alt="MiniPo" />
-                    </div>
-                  </div>
+                  onClick={showImage(`/img/proyectos/${project.id}/${image}`, index)}
+                  className={classes.gridImage}>
+                  <Img
+                    useHeight
+                    placeholder={true}
+                    src={image ? `img/proyectos/${project.id}/${image}` : null}
+                  />
                 </div>
               );
             })}

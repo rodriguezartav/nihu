@@ -11,7 +11,7 @@ export default function FormDialog(props) {
         <div className="single-portfolio overlay">
           <img
             style={{ height: 170 }}
-            src={`/img/proyectos/${props.item.id}/item.jpg`}
+            src={`https://staging-img.nihu.link/img/proyectos/${props.item.id}/item.jpg?width=270&height=170`}
             alt="Nihu Foto del Proyecto"
           />
         </div>
