@@ -41,7 +41,7 @@ function App() {
     return (
       <div style={{ margin: 10 }}>
         <h1>Acceso restringido</h1>
-        <input placeholder="Cuanto es 2 + 2?" onChange={onChange} value={value} />
+        <input placeholder="Cuanto es 1+1?" onChange={onChange} value={value} />
         <p>Porque se hace esto? Para que no aparezca en Google Search.</p>
       </div>
     );
