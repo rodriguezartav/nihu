@@ -12,6 +12,15 @@ import Team from "./views/team";
 import Project from "./views/project";
 import ScrollToTop from "./helpers/scrollTo";
 function App() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const nihu = urlParams.get("nihu");
+  if (!nihu)
+    return (
+      <div>
+        <h1>Agregue ?nihu=true a la dirección para accesar el sitio.</h1>
+        <p>Porque se hace esto? Para que no aparezca en Google Search.</p>
+      </div>
+    );
   return (
     <BrowserRouter>
       <ScrollToTop>
